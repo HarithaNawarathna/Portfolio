@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
+import Link from 'next/link';
 
-function page() {
+const Page: React.FC = () => {
   return (
-    <div>about</div>
-  )
+    <div>
+      <h1>About</h1>
+      <Link href="/">Back to Home</Link>
+    </div>
+  );
 }
 
-export default page
+export default Page;
