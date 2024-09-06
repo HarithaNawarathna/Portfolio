@@ -1,29 +1,20 @@
 import React from 'react';
-import Link from 'next/link';
+import Image from 'next/image';
+import img1 from '../public/Profile_img.jpg';
 
 const Home: React.FC = () => {
+  console.log(img1);
   return (
-    <div className="p-6 max-w-4xl mx-auto bg-white shadow-md rounded-lg">
-      <h1 className="text-3xl font-bold mb-6">Home Page</h1>
-      <ul className="list-disc pl-5 mb-6">
-        <li className="mb-2">
-          <Link href="/" className="text-blue-500 hover:underline">Home</Link>
-        </li>
-        <li className="mb-2">
-          <Link href="/About" className="text-blue-500 hover:underline">About</Link>
-        </li>
-        <li className="mb-2">
-          <Link href="/Contact" className="text-blue-500 hover:underline">Contact</Link>
-        </li>
-        <li className="mb-2">
-          <Link href="/Skills" className="text-blue-500 hover:underline">Skills</Link>
-        </li>
-      </ul>
-      <Link href="https://nextjs.org/" className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">
-        NextJS website
-      </Link>
+    <div className="p-6 max-w-4xl mx-auto bg-gray-100 shadow-lg rounded-lg">
+      <h1 className="text-4xl font-extrabold text-gray-900 mb-6 text-center">
+        Hey There
+      </h1>
+      <div className="flex justify-center mb-6">
+        <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-gray-300 shadow-md">
+          <Image src={img1} alt="Profile Image" className="object-cover w-full h-full" />
+        </div>
+      </div>
     </div>
-    
   );
 }
 
